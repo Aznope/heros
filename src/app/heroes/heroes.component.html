@@ -1,0 +1,15 @@
+<div class="heroes row">
+  <div class="col-md-3">
+    <h2>Heroes</h2>
+    <ul class="heroes">
+      <li *ngFor="let hero of heroes" [class.active]="selected(hero)" class="list-group-item" (click)="onSelect(hero)">
+        <!-- <a routerLink="/detail/{{hero.id}}"> -->
+        <span class="badge badge-secondary">{{hero.id}}</span> {{hero.name}}
+        <!-- </a> -->
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-9">
+    <app-hero-detail [heros]="selectedHero" (selected)="onSelect($event)"></app-hero-detail>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<h3>Top Heroes</h3>
+<div class="container" style="margin-left: 10px;padding: 0">
+  <div style="width:150px;">
+    <a *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}">
+      <div class="card bg-info text-white" style="width:200px;height: 60px">
+        <h4 class="card-body" style="line-height:15px">{{hero.name}}</h4>
+      </div>
+    </a>
+  </div>
+</div>

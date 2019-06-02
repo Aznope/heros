@@ -1,0 +1,26 @@
+<!-- <div class="container" *ngIf="hero">
+  <h2>{{hero.name | uppercase}} 信息</h2>
+  <div><span>标识号:</span>{{hero.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="hero.name" placeholder="name" />
+    </label>
+  </div>
+  <a (click)="select(hero)" class="btn btn-primary">关闭</a>
+  <button (click)="goBack()">go back</button>
+</div> -->
+<div class="container">
+  <div class="row">
+    <div class="card" style="width:18rem;" *ngFor="let hero of heros">
+      <div class="card-body">
+        <h5 class="card-title">{{hero.name | uppercase}} 详情</h5>
+        <div><span>标识号:</span>{{hero.id}}
+        </div>
+        <label>姓名:
+          <input [(ngModel)]="hero.name" class="form-control" placeholder="name" />
+        </label>
+      </div>
+    </div>
+    <!-- <a (click)="select(hero)" class="btn btn-primary">关闭</a> -->
+  </div>
+</div>
